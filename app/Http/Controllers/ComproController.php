@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\ComproCabang;
 use App\Models\ComproGabung;
+use App\Models\ComproPartner;
 use App\Models\ComproProduk;
 use App\Models\ComproTentang;
+use App\Models\ComproTestimoni;
+use App\Models\ComproTim;
 use Illuminate\Http\Request;
 
 class ComproController extends Controller
@@ -16,12 +19,18 @@ class ComproController extends Controller
     $gabung = ComproGabung::where('grup', 'abata')->get();
     $cabang = ComproCabang::where('grup', 'abata')->get();
     $produk = ComproProduk::where('grup', 'abata')->get();
+    $testimoni = ComproTestimoni::where('grup', 'abata')->get();
+    $tim = ComproTim::where('grup', 'abata')->get();
+    $partner = ComproPartner::where('grup', 'abata')->get();
 
     return view('welcome', [
       'sejarah' => $sejarah,
       'gabungs' => $gabung,
       'cabangs' => $cabang,
-      'produks' => $produk
+      'produks' => $produk,
+      'testimonis' => $testimoni,
+      'tims' => $tim,
+      'partners' => $partner
     ]);
   }
 
