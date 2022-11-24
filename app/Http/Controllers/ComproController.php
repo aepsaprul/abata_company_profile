@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ComproCabang;
 use App\Models\ComproGabung;
+use App\Models\ComproLegal;
 use App\Models\ComproPartner;
 use App\Models\ComproProduk;
 use App\Models\ComproTentang;
@@ -45,5 +46,19 @@ class ComproController extends Controller
       'visi' => $visi,
       'misi' => $misi
     ]);
+  }
+
+  public function privacy()
+  {
+    $privacy = ComproLegal::where('grup', 'abata')->where('nama', 'privacy')->orderBy('id', 'desc')->first();
+
+    return view('privacy', ['privacy' => $privacy]);
+  }
+
+  public function term()
+  {
+    $term = ComproLegal::where('grup', 'abata')->where('nama', 'term')->orderBy('id', 'desc')->first();
+
+    return view('term', ['term' => $term]);
   }
 }

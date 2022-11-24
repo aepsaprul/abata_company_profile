@@ -276,7 +276,7 @@
                 <div class="info-box">
                   <i class="bi bi-clock"></i>
                   <h3>Buka</h3>
-                  <p>Setiap Hari<br>08:00 - 20:00</p>
+                  <a href="">Setiap Hari<br>08:00 - 20:00</a>
                 </div>
               </div>
               <div class="col-md-6">

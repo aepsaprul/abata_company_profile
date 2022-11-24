@@ -37,6 +37,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  @yield('style')
 </head>
 
 <body>
@@ -53,7 +55,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
             <h4>Cetak Online Via Whatsapp</h4>
-            <p><img src="assets/img/whatsapp-button.png" alt="tombol-whatsapp" style="max-width: 300px;"></p>
+            <p><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank"><img src="assets/img/whatsapp-button.png" alt="tombol-whatsapp" style="max-width: 300px;"></a></p>
           </div>
         </div>
       </div>
@@ -72,21 +74,25 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4 class="font-weight-bold text-uppercase text-primary">Sosial</h4>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="youtube"><i class="bi bi-youtube"></i></a>
+              <a href="https://vm.tiktok.com/ZSRopJbpu/" class="tiktok" title="Tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
+              <a href="https://twitter.com/abataprinting_" class="twitter" title="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/Abataprintingpurwokerto" class="facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/abataprinting_/" class="instagram" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCQh6JvwZ_nt6fyKhPkOI8FA" class="youtube" title="Youtube" target="_blank"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
             <h4 class="font-weight-bold text-uppercase text-primary">Legal</h4>
-            <a href="#" class="text-secondary">Privacy</a> | <a href="#" class="text-secondary">Term</a>
+            <ul>
+              <li><a href="{{ route('compro.privacy') }}" target="_blank" class="text-secondary">Kebijakan Pribadi</a></li>
+              <li><a href="{{ route('compro.term') }}" target="_blank" class="text-secondary">Syarat & Ketentuan</a></li>
+            </ul>
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4 class="font-weight-bold text-uppercase text-primary">Kontak</h4>
-            <a href="#" class="text-secondary">Ajukan Pertanyaan</a>
+            <a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" class="text-secondary">Ajukan Pertanyaan</a>
           </div>
 
         </div>
@@ -95,7 +101,7 @@
 
     <div class="container">
       <div class="copyright">
-        <strong><span>Abata Printing</span></strong>
+        <strong><span>&copy;2022 Abata Printing. All Right Reserved.</span></strong>
         {{-- &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved --}}
       </div>
       <div class="credits">
@@ -108,7 +114,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center mb-5"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
@@ -121,6 +127,8 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
+
+  @yield('script')
 
 </body>
 
