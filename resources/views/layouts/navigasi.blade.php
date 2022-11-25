@@ -3,7 +3,7 @@
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
     <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-      <img src="assets/img/logo-biru.png" alt="">
+      <img src="{{ asset('public/assets/img/logo-biru.png') }}" alt="">
     </a>
 
     <nav id="navbar" class="navbar">

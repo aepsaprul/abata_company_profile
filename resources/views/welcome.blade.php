@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="assets/img/hero-img-alt.jpg" class="img-fluid" alt="" style="border-radius: 10px;">
+          <img src="{{ asset('public/assets/img/hero-img-alt.jpg') }}" class="img-fluid" alt="" style="border-radius: 10px;">
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/about-alt.svg" class="img-fluid" alt="">
+            <img src="{{ asset('public/assets/img/about-alt.svg') }}" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -265,69 +265,40 @@
           <div class="col-lg-6">
 
             <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Alamat</h3>
-                  <a href="https://goo.gl/maps/yDaWCNx974Sks6Wt7" target="_blank">Jl. M Yamin Gang III, Purwokerto Selatan, Karangpucung, Kec. Purwokerto Selatan, Kab. Banyumas</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-clock"></i>
-                  <h3>Buka</h3>
-                  <a href="">Setiap Hari<br>08:00 - 20:00</a>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Telepon</h3>
-                  <p>(0281) 111111</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div>
+              @foreach ($kontaks as $item)
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="{{ $item->icon }}"></i>
+                    <h3>{{ $item->title }}</h3>
+                    <p>{{ $item->deskripsi }}</p>
+                  </div>
+                </div>                  
+              @endforeach
             </div>
 
           </div>
 
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
+          <div class="col-lg-6 php-email-form">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" required>
               </div>
-            </form>
-
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subjek" id="subjek" placeholder="Subjek" required>
+              </div>
+              <div class="col-md-12">
+                <textarea id="pesan" class="form-control" name="pesan" rows="6" placeholder="Pesan" required></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <button type="submit" id="btn-submit">Kirim Pesan</button>
+                <div id="sent-message" class="sent-message">Pesan Anda berhasil terkirim. Terima kasih!</div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -337,6 +308,46 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+@endsection
+
+@section('script')
+<script>
+  var csrf = document.querySelector('meta[name="csrf-token"]').content;
+
+  let nama = document.getElementById('nama');
+  let email = document.getElementById('email');
+  let subjek = document.getElementById('subjek');
+  let pesan = document.getElementById('pesan');
+  let sent_message = document.getElementById('sent-message');
+
+  let btn_submit = document.getElementById('btn-submit');
+  btn_submit.onclick = function (e) {
+    let dataObj = {
+      nama: nama.value,
+      email: email.value,
+      subjek: subjek.value,
+      pesan: pesan.value,
+      _token: csrf
+    }
+  
+    let postData = JSON.stringify(dataObj);
+    // console.log(postData);
+  
+    const url = "{{ URL::route('compro.kontak.store') }}";
+    let xhr = new XMLHttpRequest();
+  
+    xhr.open('POST', url, true)
+    xhr.setRequestHeader('Content-type', 'application/json; charset=UT-8')
+    xhr.send(postData);
+  
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        sent_message.style.cssText = "display: block;"
+      }
+    }    
+  }
+
+</script>
 @endsection
 
   

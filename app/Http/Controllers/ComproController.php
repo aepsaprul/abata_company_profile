@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\ComproCabang;
 use App\Models\ComproGabung;
+use App\Models\ComproKontak;
+use App\Models\ComproKontakForm;
 use App\Models\ComproLegal;
 use App\Models\ComproPartner;
 use App\Models\ComproProduk;
@@ -23,6 +25,7 @@ class ComproController extends Controller
     $testimoni = ComproTestimoni::where('grup', 'abata')->get();
     $tim = ComproTim::where('grup', 'abata')->get();
     $partner = ComproPartner::where('grup', 'abata')->get();
+    $kontak = ComproKontak::where('grup', 'abata')->get();
 
     return view('welcome', [
       'sejarah' => $sejarah,
@@ -31,7 +34,8 @@ class ComproController extends Controller
       'produks' => $produk,
       'testimonis' => $testimoni,
       'tims' => $tim,
-      'partners' => $partner
+      'partners' => $partner,
+      'kontaks' => $kontak
     ]);
   }
 
@@ -60,5 +64,20 @@ class ComproController extends Controller
     $term = ComproLegal::where('grup', 'abata')->where('nama', 'term')->orderBy('id', 'desc')->first();
 
     return view('term', ['term' => $term]);
+  }
+
+  public function kontakStore(Request $request)
+  {
+    $kontak = new ComproKontakForm;
+    $kontak->grup = "abata";
+    $kontak->nama = $request->nama;
+    $kontak->email = $request->email;
+    $kontak->subjek = $request->subjek;
+    $kontak->pesan = $request->pesan;
+    $kontak->save();
+
+    return response()->json([
+      'status' => 200
+    ]);
   }
 }
