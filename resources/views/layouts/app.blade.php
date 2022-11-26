@@ -30,6 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('public/assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('public/assets/css/aep.css') }}">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.11.0
@@ -127,6 +128,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('public/assets/js/main.js') }}"></script>
+  <script src="{{ asset('public/assets/js/aep.js') }}"></script>
 
   @yield('script')
 

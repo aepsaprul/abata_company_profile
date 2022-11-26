@@ -72,7 +72,10 @@
           @foreach ($gabungs as $item)
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div class="box">
-                <img src="{{ asset('http://localhost/abata_hrd/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- dev --}}
+                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                {{-- prod --}}
+                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
                 <h3 class="text-capitalize">{{ $item->nama }}</h3>
                 <p style="text-align: justify;">{{ $item->deskripsi }}</p>
               </div>
@@ -124,30 +127,38 @@
           <p>Lihat produk terbaru kami</p>
         </header>
 
-        {{-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Semua</li>
               <li data-filter=".filter-indoor">Indoor</li>
               <li data-filter=".filter-outdoor">Outdoor</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-kreatif">Kreatif</li>
             </ul>
           </div>
-        </div> --}}
+        </div>
 
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach ($produks as $item)
-            <div class="col-lg-4 col-md-6 portfolio-item filter-indoor">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $item->kategori }}">
               <div class="portfolio-wrap">
-                <img src="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- dev --}}
+                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                {{-- prod --}}
+                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>{{ $item->nama_produk }}</h4>
+                  <h4 class="text-uppercase">{{ $item->nama_produk }}</h4>
                   <div class="portfolio-links">
-                    <a href="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox" title="{{ $item->nama_produk }}"><i class="bi bi-plus"></i></a>
+                    {{-- dev --}}
+                    {{-- <a href="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a> --}}
+                    {{-- prod --}}
+                    <a href="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
                     {{-- <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a> --}}
                   </div>
                 </div>
+                <div class="text-center fw-bold text-uppercase mt-2">{{ $item->nama_produk }}</div>
+                <div class="text-center">@currency($item->harga)</div>
               </div>
             </div>              
           @endforeach
@@ -179,7 +190,10 @@
                   </div>
                   <p>{{ $item->komentar }}</p>
                   <div class="profile mt-auto">
-                    <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt="">
+                    {{-- dev --}}
+                    {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt=""> --}}
+                    {{-- prod --}}
+                    <img src="{{ asset('https://hcm.abata-printing.com/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt="">
                     <h3>{{ $item->nama }}</h3>
                     {{-- <h4>Ceo &amp; Founder</h4> --}}
                   </div>
@@ -196,7 +210,7 @@
     </section><!-- End Testimoni Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
+    {{-- <section id="team" class="team">
 
       <div class="container" data-aos="fade-up">
 
@@ -210,8 +224,11 @@
           @foreach ($tims as $item)
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="member">
-                <div class="member-img">
-                  <img src="{{ asset('http://localhost/abata_hrd/public/compro/tim/' . $item->foto) }}" class="img-fluid" alt="">
+                <div class="member-img"> --}}
+                  {{-- dev --}}
+                  {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/tim/' . $item->foto) }}" class="img-fluid" alt=""> --}}
+                  {{-- prod --}}
+                  {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/tim/' . $item->foto) }}" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
                   <h4 class="text-capitalize">{{ $item->nama }}</h4>
@@ -226,7 +243,8 @@
 
       </div>
 
-    </section><!-- End Team Section -->
+    </section> --}}
+    <!-- End Team Section -->
 
     <!-- ======= Partner Section ======= -->
     <section id="partner" class="clients">
@@ -235,13 +253,18 @@
 
         <header class="section-header">
           <h2>Partner</h2>
-          <p>Partner bisnis kami</p>
+          <p>Partner kami</p>
         </header>
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
             @foreach ($partners as $item)
-              <div class="swiper-slide"><img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""></div>                
+              <div class="swiper-slide">
+                {{-- dev --}}
+                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                {{-- prod --}}
+                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
+              </div>          
             @endforeach
           </div>
           <div class="swiper-pagination"></div>
@@ -306,6 +329,38 @@
       </div>
 
     </section><!-- End Contact Section -->
+
+    <section id="map">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.3157973730754!2d109.2408753647953!3d-7.4302631264244585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5609037960fc0ab3!2sABATA%20PRINTING%20PURWOKERTO!5e0!3m2!1sid!2sid!4v1669451753957!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4538562399953!2d109.26787541530466!3d-7.414916375086345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655fd2360fbbfb%3A0x5e56f7d7754c5826!2sABATA%20Printing%20Dukuhwaluh!5e0!3m2!1sid!2sid!4v1669451907111!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.561153404379!2d109.24285451530459!3d-7.402967274950527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655ffe4169f3eb%3A0x64d4f3c2042c8c01!2sAbata%20Printing%20HR%20Bunyamin!5e0!3m2!1sid!2sid!4v1669451854163!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.6558759897175!2d109.3671973153046!3d-7.39240257483066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6559d2e28893e9%3A0x2c6eeeaedca567ec!2sCV.%20Abata%20Printing%20Purbalingga!5e0!3m2!1sid!2sid!4v1669451816416!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.84551838955!2d109.02535381530727!3d-7.69972207839281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6512ceab2d45eb%3A0x1cebdf4f7c13422b!2sABATA%20Printing%20Cilacap!5e0!3m2!1sid!2sid!4v1669451934484!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.9184071411655!2d109.01483151530343!3d-7.250126873233547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f8ff12fb3706d%3A0xe786890c080740a0!2sAbata%20Printing%20Bumiayu!5e0!3m2!1sid!2sid!4v1669451984313!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main><!-- End #main -->
 @endsection
