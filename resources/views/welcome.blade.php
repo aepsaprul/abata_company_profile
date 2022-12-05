@@ -1,25 +1,23 @@
 @extends('layouts.app')
 
+@section('style')
+
+@endsection
+
 @section('content')
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Abata Printing <br> Sahabat Bertumbuh</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">One Pray, One Dream, One Team</h2>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Mulai</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
+        <!-- Swiper -->
+        <div class="swiper heroSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-1.webp') }}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-2.webp') }}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-3.webp') }}" alt=""></div>
           </div>
-        </div>
-        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{ asset('public/assets/img/hero-img-alt.jpg') }}" class="img-fluid" alt="" style="border-radius: 10px;">
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -70,12 +68,12 @@
         <div class="row">
 
           @foreach ($gabungs as $item)
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="box">
                 {{-- dev --}}
-                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                <img src="{{ asset('http://localhost/abata_hrd/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
                 {{-- prod --}}
-                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                 <h3 class="text-capitalize">{{ $item->nama }}</h3>
                 <p style="text-align: justify;">{{ $item->deskripsi }}</p>
               </div>
@@ -105,8 +103,8 @@
               <div class="service-box blue">
                 <i class="ri-discuss-line icon"></i>
                 <h3 class="text-capitalize">{{ $item->nama }}</h3>
-                <p>{{ $item->alamat }}</p>
-                <span>{{ $item->kontak }}</span>
+                <p><a href="https://goo.gl/maps/JDhXHDZ1kCuwRYrN8" target="_blank">{{ $item->alamat }}</a></p>
+                <span><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank">{{ $item->kontak }}</a></span>
               </div>
             </div>              
           @endforeach
@@ -131,9 +129,14 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Semua</li>
+              <li data-filter=".filter-a3">A3</li>
               <li data-filter=".filter-indoor">Indoor</li>
               <li data-filter=".filter-outdoor">Outdoor</li>
-              <li data-filter=".filter-kreatif">Kreatif</li>
+              <li data-filter=".filter-merchandise">Merchandise</li>
+              <li data-filter=".filter-advertising">Advertising</li>
+              <li data-filter=".filter-uv">UV</li>
+              <li data-filter=".filter-dtf">DTF</li>
+              <li data-filter=".filter-akrilik">Akrilik</li>
             </ul>
           </div>
         </div>
@@ -141,19 +144,19 @@
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach ($produks as $item)
-            <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $item->kategori }}">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-{{ $item->kategori }}">
               <div class="portfolio-wrap">
                 {{-- dev --}}
-                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                <img src="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
                 {{-- prod --}}
-                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                 <div class="portfolio-info">
                   <h4 class="text-uppercase">{{ $item->nama_produk }}</h4>
                   <div class="portfolio-links">
                     {{-- dev --}}
-                    {{-- <a href="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a> --}}
+                    <a href="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
                     {{-- prod --}}
-                    <a href="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                    {{-- <a href="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a> --}}
                     {{-- <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a> --}}
                   </div>
                 </div>
@@ -191,9 +194,9 @@
                   <p>{{ $item->komentar }}</p>
                   <div class="profile mt-auto">
                     {{-- dev --}}
-                    {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt=""> --}}
+                    <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt="">
                     {{-- prod --}}
-                    <img src="{{ asset('https://hcm.abata-printing.com/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt="">
+                    {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt=""> --}}
                     <h3>{{ $item->nama }}</h3>
                     {{-- <h4>Ceo &amp; Founder</h4> --}}
                   </div>
@@ -261,9 +264,9 @@
             @foreach ($partners as $item)
               <div class="swiper-slide">
                 {{-- dev --}}
-                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
                 {{-- prod --}}
-                <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
               </div>          
             @endforeach
           </div>
@@ -366,6 +369,7 @@
 @endsection
 
 @section('script')
+
 <script>
   var csrf = document.querySelector('meta[name="csrf-token"]').content;
 
