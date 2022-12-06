@@ -54,7 +54,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
+    {{-- <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12 text-center">
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
 
     <div class="footer-top">
       <div class="container">
@@ -118,7 +118,10 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center mb-5"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" style="margin-bottom: 100px;"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" class="float" target="_blank">
+    <i class="bi bi-whatsapp my-float"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="{{ asset('public/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>

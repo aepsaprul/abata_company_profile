@@ -249,32 +249,84 @@
     </section> --}}
     <!-- End Team Section -->
 
+    <!-- ======= Pelanggan Section ======= -->
+    <section id="pelanggan" class="clients">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <p>Pelanggan Kami</p>
+        </header>
+
+        <div class="clients-slider swiper">
+          <!-- Swiper -->
+          <div class="swiper pelangganSwiper">
+            <div class="swiper-wrapper">
+              @foreach ($pelanggans as $item)
+                <div class="swiper-slide">
+                  {{-- dev --}}
+                  <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt="">
+                  {{-- prod --}}
+                  {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                </div>
+                @endforeach
+            </div>
+          </div>
+          {{-- <div class="swiper-wrapper align-items-center">
+            @foreach ($pelanggans as $item)
+              <div class="swiper-slide"> --}}
+                {{-- dev --}}
+                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                {{-- prod --}}
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+              {{-- </div>          
+            @endforeach
+          </div>
+          <div class="swiper-pagination"></div> --}}
+        </div>
+      </div>
+
+    </section><!-- End pelanggan Section -->
+
     <!-- ======= Partner Section ======= -->
     <section id="partner" class="clients">
 
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Partner</h2>
-          <p>Partner kami</p>
+          {{-- <h2>Partner</h2> --}}
+          <p>Didukung Oleh:</p>
         </header>
 
         <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
+          <!-- Swiper -->
+          <div class="swiper partnerSwiper">
+            <div class="swiper-wrapper">
+              @foreach ($partners as $item)
+                <div class="swiper-slide">
+                  {{-- dev --}}
+                  <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
+                  {{-- prod --}}
+                  {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
+                </div>
+                @endforeach
+            </div>
+          </div>
+          {{-- <div class="swiper-wrapper align-items-center">
             @foreach ($partners as $item)
-              <div class="swiper-slide">
+              <div class="swiper-slide"> --}}
                 {{-- dev --}}
-                <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
+                {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                 {{-- prod --}}
                 {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
-              </div>          
+              {{-- </div>          
             @endforeach
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination"></div> --}}
         </div>
       </div>
 
-    </section><!-- End Partner Section -->
+    </section>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -333,7 +385,7 @@
 
     </section><!-- End Contact Section -->
 
-    <section id="map">
+    {{-- <section id="map">
       <div class="container" data-aos="fade-up">
         <div class="row gy-4">
           <!-- Swiper -->
@@ -363,7 +415,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
   </main><!-- End #main -->
 @endsection

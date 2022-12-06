@@ -8,6 +8,7 @@ use App\Models\ComproKontak;
 use App\Models\ComproKontakForm;
 use App\Models\ComproLegal;
 use App\Models\ComproPartner;
+use App\Models\ComproPelanggan;
 use App\Models\ComproProduk;
 use App\Models\ComproTentang;
 use App\Models\ComproTestimoni;
@@ -25,6 +26,7 @@ class ComproController extends Controller
     $testimoni = ComproTestimoni::where('grup', 'abata')->get();
     $tim = ComproTim::where('grup', 'abata')->get();
     $partner = ComproPartner::where('grup', 'abata')->get();
+    $pelanggan = ComproPelanggan::where('grup', 'abata')->get();
     $kontak = ComproKontak::where('grup', 'abata')->get();
 
     return view('welcome', [
@@ -35,6 +37,7 @@ class ComproController extends Controller
       'testimonis' => $testimoni,
       'tims' => $tim,
       'partners' => $partner,
+      'pelanggans' => $pelanggan,
       'kontaks' => $kontak
     ]);
   }
