@@ -161,7 +161,7 @@
                   </div>
                 </div>
                 <div class="text-center fw-bold text-uppercase mt-2">{{ $item->nama_produk }}</div>
-                <div class="text-center">@currency($item->harga)</div>
+                <div class="text-center">{{ $item->harga }}</div>
               </div>
             </div>              
           @endforeach
@@ -326,6 +326,76 @@
         </div>
       </div>
 
+    </section>
+
+    <section>
+      <div class="container" data-aos="fade-left">
+        <header class="section-header">
+          <p>Blog</p>
+        </header>
+        <div style="display: flex;">
+          <div style="width: 50%;">
+            <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
+            <div style="display: flex; margin-top: 10px; align-items: center;">
+              <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+              <div style="font-size: 12px;">02 Des 2022</div>
+            </div>
+            <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 14px;">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis consequuntur rerum, placeat dicta eveniet, repellendus iste necessitatibus facere commodi, explicabo reprehenderit illum asperiores nisi fugit! Molestiae voluptate iste voluptatem ea?  
+            </p>
+          </div>
+          <div style="width: 50%; margin-left: 20px; display: grid; grid-template-columns: auto auto auto; gap: 10px;">
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+            <div>
+              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ======= Contact Section ======= -->

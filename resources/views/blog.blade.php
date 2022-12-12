@@ -18,27 +18,51 @@
           <div style="display: grid; grid-template-columns: auto auto auto; gap: 30px;">
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
             <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
               <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
+              <div style="display: flex; margin-top: 10px; align-items: center;">
+                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
+                <div style="font-size: 12px;">02 Des 2022</div>
+              </div>
+              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
             </div>
           </div>
         </div>
