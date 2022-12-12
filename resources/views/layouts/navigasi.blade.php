@@ -1,5 +1,5 @@
 <!-- ======= Header ======= -->
-<header id="header" class="header fixed-top">
+<header id="header" class="header fixed-top" style="background-color: white;">
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
     <a href="{{ url('/') }}" class="logo d-flex align-items-center">
@@ -16,6 +16,7 @@
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
         <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+        <li><a class="nav-link" href="{{ route('compro.blog') }}">Blog</a></li>
         <li><a class="nav-link scrollto" href="#gabung">Gabung</a></li>
         <li><a class="nav-link scrollto" href="#cabang">Cabang</a></li>
         <li><a class="nav-link scrollto" href="#produk">Produk</a></li>

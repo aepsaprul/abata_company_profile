@@ -19,3 +19,4 @@ Route::get('/tentang', [ComproController::class, 'tentang'])->name('compro.tenta
 Route::get('/kebijakan-perusahaan', [ComproController::class, 'privacy'])->name('compro.privacy');
 Route::get('/syarat-dan-ketentuan', [ComproController::class, 'term'])->name('compro.term');
 Route::post('/kontak/store', [ComproController::class, 'kontakStore'])->name('compro.kontak.store');
+Route::get('/blog', [ComproController::class, 'blog'])->name('compro.blog');

@@ -83,4 +83,9 @@ class ComproController extends Controller
       'status' => 200
     ]);
   }
+
+  public function blog()
+  {
+    return view('blog');
+  }
 }
