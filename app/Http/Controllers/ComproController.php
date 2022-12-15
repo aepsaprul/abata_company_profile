@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComproBlog;
 use App\Models\ComproCabang;
 use App\Models\ComproGabung;
 use App\Models\ComproKontak;
@@ -28,6 +29,8 @@ class ComproController extends Controller
     $partner = ComproPartner::where('grup', 'abata')->get();
     $pelanggan = ComproPelanggan::where('grup', 'abata')->get();
     $kontak = ComproKontak::where('grup', 'abata')->get();
+    $blog_thumbnail = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->first();
+    $blog_list = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->limit(7)->get();
 
     return view('welcome', [
       'sejarah' => $sejarah,
@@ -38,7 +41,9 @@ class ComproController extends Controller
       'tims' => $tim,
       'partners' => $partner,
       'pelanggans' => $pelanggan,
-      'kontaks' => $kontak
+      'kontaks' => $kontak,
+      'blog_thumbnail' => $blog_thumbnail,
+      'blog_list' => $blog_list
     ]);
   }
 

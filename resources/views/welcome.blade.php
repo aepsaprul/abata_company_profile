@@ -6,16 +6,16 @@
 
 @section('content')
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex align-items-center">
+  <section id="hero" style="padding: 0;">
 
-    <div class="container">
+    <div class="container" style="padding-top: 90px;">
       <div class="row">
         <!-- Swiper -->
         <div class="swiper heroSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-1.webp') }}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-2.webp') }}" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-3.webp') }}" alt=""></div>
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-1.webp') }}" alt="banner"></div>
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-2.webp') }}" alt="banner"></div>
+            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-3.webp') }}" alt="banner"></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -26,7 +26,7 @@
 
   <main id="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about" style="padding: 10px 0;">
 
       <div class="container" data-aos="fade-up">
         <div class="row gx-0">
@@ -329,70 +329,41 @@
     </section>
 
     <section>
-      <div class="container" data-aos="fade-left">
-        <header class="section-header">
+      <div class="container af-blog" data-aos="fade-left">
+        <header class="section-header af-header">
           <p>Blog</p>
         </header>
-        <div style="display: flex;">
-          <div style="width: 50%;">
-            <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-            <div style="display: flex; margin-top: 10px; align-items: center;">
-              <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-              <div style="font-size: 12px;">02 Des 2022</div>
+        <div class="af-blog-wrapper">
+          <div class="af-blog-thumbnail">
+            {{-- dev --}}
+            <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog">
+            {{-- prod --}}
+            {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog"> --}}
+            <p class="af-blog-judul">{{ $blog_thumbnail->judul }}</p>
+            <div class="af-blog-tanggal">
+              <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
+              <div class="af-blog-tanggal-teks">02 Des 2022</div>
             </div>
-            <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 14px;">
+            <p class="af-blog-deskripsi">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis consequuntur rerum, placeat dicta eveniet, repellendus iste necessitatibus facere commodi, explicabo reprehenderit illum asperiores nisi fugit! Molestiae voluptate iste voluptatem ea?  
             </p>
           </div>
-          <div style="width: 50%; margin-left: 20px; display: grid; grid-template-columns: auto auto auto; gap: 10px;">
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
-            <div>
-              <img src="{{ asset('public/assets/img/blog-2.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 10px; font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nam.</p>
-            </div>
+          <div class="af-blog-list">
+            @foreach ($blog_list as $key => $item)
+              @if ($key != 0)
+                  <div>
+                    {{-- dev --}}
+                    <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $item->gambar) }}" alt="blog">
+                    {{-- prod --}}
+                    {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $item->gambar) }}" alt="blog"> --}}
+                    <p class="af-blog-judul">{{ $blog_thumbnail->judul }}</p>
+                    <div class="af-blog-tanggal">
+                      <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
+                      <div class="af-blog-tanggal-teks">02 Des 2022</div>
+                    </div>
+                  </div>                
+              @endif
+            @endforeach
           </div>
         </div>
       </div>

@@ -119,7 +119,7 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" style="margin-bottom: 100px;"><i class="bi bi-arrow-up-short"></i></a>
-  <a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" class="float" target="_blank">
+  <a href="https://api.whatsapp.com/send/?phone=6285726269500&#038;text=Assalamu%27alaikum+&#038;app_absent=0" class="float" target="_blank">
     <i class="bi bi-whatsapp my-float"></i>
   </a>
 
