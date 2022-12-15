@@ -91,6 +91,15 @@ class ComproController extends Controller
 
   public function blog()
   {
-    return view('blog');
+    $blog = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->simplePaginate(6);
+
+    return view('blog', ['blogs' => $blog]);
+  }
+
+  public function blogDetail($id)
+  {
+    $blog = ComproBlog::find($id);
+
+    return view('blogDetail', ['blog' => $blog]);
   }
 }

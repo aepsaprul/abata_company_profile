@@ -4,75 +4,37 @@
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
-  <section class="breadcrumbs">
-    <div class="container" style="text-align: center;">
-      <p style="margin-top: 20px;">BLOG</p>
+  <div class="af-blog-page-title">
+    <div class="container">
+      <p>BLOG</p>
     </div>
-  </section><!-- End Breadcrumbs -->
+  </div><!-- End Breadcrumbs -->
 
   <!-- ======= Portfolio Details Section ======= -->
   <section id="portfolio-details" class="portfolio-details">
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-12">
-          <div style="display: grid; grid-template-columns: auto auto auto; gap: 30px;">
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
-            <div style="padding: 10px; box-shadow: -3px -1px 12px -1px rgba(0,0,0,0.21);">
-              <img src="{{ asset('public/assets/img/blog-1.webp') }}" alt="blog" style="width: 100%;">
-              <div style="display: flex; margin-top: 10px; align-items: center;">
-                <div style="margin-right: 10px;"><i class="ri-calendar-2-line"></i></div>
-                <div style="font-size: 12px;">02 Des 2022</div>
-              </div>
-              <p style="text-align: justify; text-indent: 30px; margin-top: 20px; font-size: 14px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eaque facere odio vitae quisquam illum rem sed amet, consequatur corrupti!</p>
-            </div>
+          <div class="af-blog-page-content">
+            @foreach ($blogs as $item)
+              <div class="af-blog-container">
+                {{-- dev --}}
+                <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $item->gambar) }}" alt="blog">
+                {{-- prod --}}
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $item->gambar) }}" alt="blog"> --}}
+                <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$item->id]) }}">{{ $item->judul }}</a></p>
+                <div class="af-blog-tanggal">
+                  <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
+                  <div class="af-blog-tanggal-teks">{{ $item->created_at }}</div>
+                </div>
+              </div>                
+            @endforeach
           </div>
         </div>
       </div>
       <div class="row">        
-        <div>
-          <p style="text-align: center; margin-top: 20px;">
-            <span style="font-size: 40px;"><i class="ri-arrow-left-s-fill"></i></span>
-            <span style="font-size: 40px;"><i class="ri-arrow-right-s-fill"></i></span>
-          </p>
+        <div class="af-blog-page-paginate">
+            {{ $blogs->links() }}
         </div>
       </div>
     </div>

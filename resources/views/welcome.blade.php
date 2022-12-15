@@ -356,7 +356,7 @@
             <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog">
             {{-- prod --}}
             {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog"> --}}
-            <p class="af-blog-judul">{{ $blog_thumbnail->judul }}</p>
+            <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$blog_thumbnail->id]) }}">{{ $blog_thumbnail->judul }}</a></p>
             <div class="af-blog-tanggal">
               <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
               <div class="af-blog-tanggal-teks">02 Des 2022</div>
@@ -373,7 +373,7 @@
                     <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $item->gambar) }}" alt="blog">
                     {{-- prod --}}
                     {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $item->gambar) }}" alt="blog"> --}}
-                    <p class="af-blog-judul">{{ $blog_thumbnail->judul }}</p>
+                    <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$item->id]) }}">{{ $blog_thumbnail->judul }}</a></p>
                     <div class="af-blog-tanggal">
                       <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
                       <div class="af-blog-tanggal-teks">02 Des 2022</div>
