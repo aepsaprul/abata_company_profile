@@ -137,6 +137,7 @@
               <li data-filter=".filter-uv">UV</li>
               <li data-filter=".filter-dtf">DTF</li>
               <li data-filter=".filter-akrilik">Akrilik</li>
+              <li data-filter=".filter-offset">Offset</li>
             </ul>
           </div>
         </div>
@@ -257,21 +258,29 @@
         <header class="section-header">
           <p>Pelanggan Kami</p>
         </header>
+        <div class="af-client-wrapper">
+          @foreach ($pelanggans as $item)
+            {{-- dev --}}
+            <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" alt="pelanggan">
+            {{-- prod --}}
+            {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/pelanggan/' . $item->gambar) }}" alt="pelanggan"> --}}
+          @endforeach
+        </div>
 
-        <div class="clients-slider swiper">
+        {{-- <div class="clients-slider swiper"> --}}
           <!-- Swiper -->
-          <div class="swiper pelangganSwiper">
-            <div class="swiper-wrapper">
-              @foreach ($pelanggans as $item)
-                <div class="swiper-slide">
+          {{-- <div class="swiper pelangganSwiper"> --}}
+            {{-- <div class="swiper-wrapper"> --}}
+              {{-- @foreach ($pelanggans as $item) --}}
+                {{-- <div class="swiper-slide"> --}}
                   {{-- dev --}}
-                  <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt="">
+                  {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                   {{-- prod --}}
                   {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/pelanggan/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
-                </div>
-                @endforeach
-            </div>
-          </div>
+                {{-- </div> --}}
+                {{-- @endforeach --}}
+            {{-- </div> --}}
+          {{-- </div> --}}
           {{-- <div class="swiper-wrapper align-items-center">
             @foreach ($pelanggans as $item)
               <div class="swiper-slide"> --}}

@@ -127,6 +127,19 @@
 .my-float{
   font-size: 25px;
 }
+
+/* client */
+.af-client-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+.af-client-wrapper img {
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
 /* partner */
 .af-partner-wrapper {
   display: grid;
@@ -206,6 +219,12 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /* client */
+  .af-client-wrapper {
+    gap: 20px;
+  }
+
+  /* partner */
   .af-partner-wrapper {
     gap: 20px;
   }
@@ -213,6 +232,19 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /* client */
+  .af-client-wrapper {
+    grid-template-columns: auto auto auto auto;
+    grid-area: 20px;
+  }
+
+  /* partner */
+  .af-partner-wrapper {
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
+
+  /* blog welcome */
   .af-blog .af-blog-wrapper {
     flex-direction: row;
   }
@@ -220,14 +252,17 @@
     margin: 0 10px;
     grid-template-columns: auto auto auto;
   }
-  .af-partner-wrapper {
-    grid-template-columns: auto auto auto auto;
-    gap: 20px;
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  /* client */
+  .af-client-wrapper {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 40px;
+  }
+
+  /* partner */
   .af-partner-wrapper {
     grid-template-columns: auto auto auto auto auto;
     gap: 40px;
@@ -236,6 +271,13 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* client */
+  .af-client-wrapper {
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 50px;
+  }
+
+  /* partner */
   .af-partner-wrapper {
     grid-template-columns: auto auto auto auto auto auto;
     gap: 50px;
