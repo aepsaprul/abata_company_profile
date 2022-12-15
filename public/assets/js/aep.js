@@ -20,14 +20,14 @@ var pelangganSwiper = new Swiper(".pelangganSwiper", {
 });
 
 // partener
-var partnerSwiper = new Swiper(".partnerSwiper", {
-  loop: true,
-  autoplay: {
-    delay: 3000
-  },
-  slidesPerView: 4,
-  spaceBetween: 30,
-}); 
+// var partnerSwiper = new Swiper(".partnerSwiper", {
+//   loop: true,
+//   autoplay: {
+//     delay: 3000
+//   },
+//   slidesPerView: 4,
+//   spaceBetween: 30,
+// }); 
 
 // map
 // var swiper = new Swiper(".mySwiper", {

@@ -127,7 +127,19 @@
 .my-float{
   font-size: 25px;
 }
+/* partner */
+.af-partner-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+.af-partner-wrapper img {
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
 
+/* blog welcome */
 .af-blog .af-blog-wrapper {
   display: flex;
   flex-direction: column;
@@ -158,7 +170,6 @@
   font-size: 14px;
 }
 .af-blog .af-blog-wrapper .af-blog-list {
-  /* margin: 0 10px; */
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
@@ -195,7 +206,9 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  
+  .af-partner-wrapper {
+    gap: 20px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -207,14 +220,24 @@
     margin: 0 10px;
     grid-template-columns: auto auto auto;
   }
+  .af-partner-wrapper {
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  
+  .af-partner-wrapper {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 40px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
+  .af-partner-wrapper {
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 50px;
+  }
 }

@@ -297,21 +297,29 @@
           {{-- <h2>Partner</h2> --}}
           <p>Didukung Oleh:</p>
         </header>
+        <div class="af-partner-wrapper">
+          @foreach ($partners as $item)
+            {{-- dev --}}
+            <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" alt="partner">
+            {{-- prod --}}
+            {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" alt="partner"> --}}
+          @endforeach
+        </div>
 
-        <div class="clients-slider swiper">
+        {{-- <div class="clients-slider swiper"> --}}
           <!-- Swiper -->
-          <div class="swiper partnerSwiper">
-            <div class="swiper-wrapper">
-              @foreach ($partners as $item)
-                <div class="swiper-slide">
+          {{-- <div class="swiper partnerSwiper"> --}}
+            {{-- <div class="swiper-wrapper"> --}}
+              {{-- @foreach ($partners as $item) --}}
+                {{-- <div class="swiper-slide"> --}}
                   {{-- dev --}}
-                  <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt="">
+                  {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                   {{-- prod --}}
                   {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/partner/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
-                </div>
-                @endforeach
-            </div>
-          </div>
+                {{-- </div> --}}
+                {{-- @endforeach --}}
+            {{-- </div> --}}
+          {{-- </div> --}}
           {{-- <div class="swiper-wrapper align-items-center">
             @foreach ($partners as $item)
               <div class="swiper-slide"> --}}
@@ -323,7 +331,7 @@
             @endforeach
           </div>
           <div class="swiper-pagination"></div> --}}
-        </div>
+        {{-- </div> --}}
       </div>
 
     </section>
