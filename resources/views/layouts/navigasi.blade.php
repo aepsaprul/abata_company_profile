@@ -16,12 +16,13 @@
       <ul>
         <li><a class="nav-link scrollto active" href="{{ url('/') }}">Home</a></li>
         <li><a class="nav-link scrollto" href="{{ url('/#about') }}">Tentang</a></li>
-        <li><a class="nav-link" href="{{ route('compro.blog') }}">Blog</a></li>
         <li><a class="nav-link scrollto" href="{{ url('/#gabung') }}">Gabung</a></li>
         <li><a class="nav-link scrollto" href="{{ url('/#cabang') }}">Cabang</a></li>
         <li><a class="nav-link scrollto" href="{{ url('/#produk') }}">Produk</a></li>
         <li><a class="nav-link scrollto" href="{{ url('/#contact') }}">Kontak</a></li>
-        <li><a class="nav-link scrollto" href="#footer">Order</a></li>
+        <li><a class="nav-link" href="{{ route('compro.blog') }}">Blog</a></li>
+        <li><a class="nav-link" href="{{ route('compro.karir') }}">Karir</a></li>
+        <li><a class="nav-link scrollto" href="https://shop.abata-printing.com/" target="_blank">Order</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->

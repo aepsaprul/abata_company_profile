@@ -138,6 +138,7 @@
               <li data-filter=".filter-dtf">DTF</li>
               <li data-filter=".filter-akrilik">Akrilik</li>
               <li data-filter=".filter-offset">Offset</li>
+              <li data-filter=".filter-finishing">Finishing</li>
             </ul>
           </div>
         </div>

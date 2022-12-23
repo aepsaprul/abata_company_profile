@@ -231,6 +231,7 @@
   border-bottom: 5px solid lightslategray;
   border-radius: 0 0 10px 10px;
   padding-bottom: 5px;
+  font-size: 25px;
 }
 .af-blog-page-content {
   display: grid;
@@ -306,6 +307,50 @@
   width: 120px;
   justify-content: space-evenly;
   border-radius: 3px;
+}
+
+/* karir page */
+.af-karir-page-title {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 70px;
+}
+.af-karir-page-title .container {
+  align-items: flex-end;
+  width: 150px;
+}
+.af-karir-page-title .container p {
+  font-weight: bold;
+  text-align: center;
+  color: lightslategray;
+  border-bottom: 5px solid lightslategray;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 5px;
+  font-size: 25px;
+}
+.af-karir-page-content p {
+  text-align: justify;
+  text-indent: 50px;
+}
+.af-karir-page-content h5 {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: bold;
+}
+.af-karir-page-content .af-karir-loker {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 40px;
+}
+.af-karir-page-content .af-karir-loker .af-list {
+  box-shadow: 0px -1px 13px -1px rgba(0,0,0,0.38);
+  -webkit-box-shadow: 0px -1px 13px -1px rgba(0,0,0,0.38);
+  -moz-box-shadow: 0px -1px 13px -1px rgba(0,0,0,0.38);
+}
+.af-karir-page-content .af-karir-loker img {
+  width: 100%;
 }
 
 /* Extra small devices (phones, 600px and down) */

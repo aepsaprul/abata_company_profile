@@ -21,3 +21,4 @@ Route::get('/syarat-dan-ketentuan', [ComproController::class, 'term'])->name('co
 Route::post('/kontak/store', [ComproController::class, 'kontakStore'])->name('compro.kontak.store');
 Route::get('/blog', [ComproController::class, 'blog'])->name('compro.blog');
 Route::get('/blog/{id}/show', [ComproController::class, 'blogDetail'])->name('compro.blog.detail');
+Route::get('/karir', [ComproController::class, 'karir'])->name('compro.karir');

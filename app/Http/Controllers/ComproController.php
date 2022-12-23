@@ -14,6 +14,7 @@ use App\Models\ComproProduk;
 use App\Models\ComproTentang;
 use App\Models\ComproTestimoni;
 use App\Models\ComproTim;
+use App\Models\LokerData;
 use Illuminate\Http\Request;
 
 class ComproController extends Controller
@@ -101,5 +102,12 @@ class ComproController extends Controller
     $blog = ComproBlog::find($id);
 
     return view('blogDetail', ['blog' => $blog]);
+  }
+
+  public function karir()
+  {
+    $loker = LokerData::where('publish', 'y')->get();
+
+    return view('karir', ['lokers' => $loker]);
   }
 }
