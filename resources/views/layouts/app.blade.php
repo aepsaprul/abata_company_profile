@@ -70,7 +70,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="{{ asset('public/assets/img/logo-biru.png') }}" alt="">
+              <img src="{{ asset('public/assets/img/logo-biru-2.png') }}" alt="">
             </a>
             <p>#SahabatBertumbuh</p>
           </div>
@@ -105,7 +105,7 @@
 
     <div class="container">
       <div class="copyright">
-        <strong><span>&copy;2022 Abata Printing. All Right Reserved.</span></strong>
+        <strong><span>&copy;2022 Abata Printing. Hak Cipta Dilindungi.</span></strong>
         {{-- &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved --}}
       </div>
       <div class="credits">

@@ -353,6 +353,19 @@
   width: 100%;
 }
 
+/* footer */
+.footer {
+  background-color: #176BB3;
+  padding-bottom: 10px;
+}
+.footer .footer-top {
+  background-color: #FFDD00;
+  background-image: none;
+}
+.footer .copyright {
+  color: lightgoldenrodyellow;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   
