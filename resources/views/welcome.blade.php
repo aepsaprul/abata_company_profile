@@ -101,7 +101,7 @@
           @foreach ($cabangs as $item)
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="service-box blue">
-                <img src="{{ asset('public/assets/img/cabang-bumiayu.jpg') }}" alt="" style="width: 200px;">
+                <img src="{{ asset('http://localhost/abata_hrd/public/compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;">
                 {{-- <h3 class="text-capitalize">{{ $item->nama }}</h3> --}}
                 <p style="margin-top: 30px;"><a href="https://goo.gl/maps/JDhXHDZ1kCuwRYrN8" target="_blank" style="color: #000;">{{ $item->alamat }}</a></p>
                 <span><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" style="color: #000;">{{ $item->kontak }}</a></span>
