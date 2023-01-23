@@ -13,9 +13,12 @@
         <!-- Swiper -->
         <div class="swiper heroSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-1.webp') }}" alt="banner"></div>
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-2.webp') }}" alt="banner"></div>
-            <div class="swiper-slide"><img src="{{ asset('public/assets/img/banner-3.webp') }}" alt="banner"></div>
+            @foreach ($slide as $item)
+              {{-- dev --}}
+              <div class="swiper-slide"><img src="{{ asset('http://localhost/abata_hrd/public/compro/slide/' . $item->gambar) }}" alt="banner"></div> 
+              {{-- prod --}}
+              {{-- <div class="swiper-slide"><img src="{{ asset('https://hcm.abata-printing.com/public/compro/slide/' . $item->gambar) }}" alt="banner"></div>    --}}
+            @endforeach
           </div>
           <div class="swiper-pagination"></div>
         </div>

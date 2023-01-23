@@ -11,6 +11,7 @@ use App\Models\ComproLegal;
 use App\Models\ComproPartner;
 use App\Models\ComproPelanggan;
 use App\Models\ComproProduk;
+use App\Models\ComproSlide;
 use App\Models\ComproTentang;
 use App\Models\ComproTestimoni;
 use App\Models\ComproTim;
@@ -32,6 +33,7 @@ class ComproController extends Controller
     $kontak = ComproKontak::where('grup', 'abata')->get();
     $blog_thumbnail = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->first();
     $blog_list = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->limit(7)->get();
+    $slide = ComproSlide::where('grup', 'abata')->get();
 
     return view('welcome', [
       'sejarah' => $sejarah,
@@ -44,7 +46,8 @@ class ComproController extends Controller
       'pelanggans' => $pelanggan,
       'kontaks' => $kontak,
       'blog_thumbnail' => $blog_thumbnail,
-      'blog_list' => $blog_list
+      'blog_list' => $blog_list,
+      'slide' => $slide
     ]);
   }
 
