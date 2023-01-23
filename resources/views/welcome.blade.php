@@ -53,7 +53,7 @@
             {{-- dev --}}
             <img src="{{ asset('http://localhost/abata_hrd/public/compro/tentang/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
             {{-- prod --}}
-            <img src="{{ asset('https://hcm.abata-printing.com/public/compro/slide/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
+            {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/tentang/' . $tentang_gambar->gambar) }}" class="img-fluid" alt=""> --}}
           </div>
 
         </div>
@@ -107,7 +107,10 @@
           @foreach ($cabangs as $item)
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="service-box blue">
+                {{-- dev --}}
                 <img src="{{ asset('http://localhost/abata_hrd/public/compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;">
+                {{-- prod --}}
+                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;"> --}}
                 {{-- <h3 class="text-capitalize">{{ $item->nama }}</h3> --}}
                 <p style="margin-top: 30px;"><a href="https://goo.gl/maps/JDhXHDZ1kCuwRYrN8" target="_blank" style="color: #000;">{{ $item->alamat }}</a></p>
                 <span><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" style="color: #000;">{{ $item->kontak }}</a></span>
@@ -165,7 +168,6 @@
                     <a href="{{ asset('http://localhost/abata_hrd/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
                     {{-- prod --}}
                     {{-- <a href="{{ asset('https://hcm.abata-printing.com/public/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a> --}}
-                    {{-- <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a> --}}
                   </div>
                 </div>
                 <div class="text-center fw-bold text-uppercase mt-2">{{ $item->nama_produk }}</div>
