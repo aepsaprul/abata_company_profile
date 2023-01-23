@@ -50,7 +50,10 @@
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('public/assets/img/about-alt.svg') }}" class="img-fluid" alt="">
+            {{-- dev --}}
+            <img src="{{ asset('http://localhost/abata_hrd/public/compro/tentang/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
+            {{-- prod --}}
+            <img src="{{ asset('https://hcm.abata-printing.com/public/compro/slide/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
           </div>
 
         </div>

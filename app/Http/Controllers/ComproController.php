@@ -34,6 +34,7 @@ class ComproController extends Controller
     $blog_thumbnail = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->first();
     $blog_list = ComproBlog::where('grup', 'abata')->orderBy('id', 'desc')->limit(7)->get();
     $slide = ComproSlide::where('grup', 'abata')->get();
+    $tentang_gambar = ComproTentang::where('grup', 'abata')->where('nama', 'gambar')->first();
 
     return view('welcome', [
       'sejarah' => $sejarah,
@@ -47,7 +48,8 @@ class ComproController extends Controller
       'kontaks' => $kontak,
       'blog_thumbnail' => $blog_thumbnail,
       'blog_list' => $blog_list,
-      'slide' => $slide
+      'slide' => $slide,
+      'tentang_gambar' => $tentang_gambar
     ]);
   }
 
