@@ -112,7 +112,7 @@
                 {{-- prod --}}
                 {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;"> --}}
                 {{-- <h3 class="text-capitalize">{{ $item->nama }}</h3> --}}
-                <p style="margin-top: 30px;"><a href="https://goo.gl/maps/JDhXHDZ1kCuwRYrN8" target="_blank" style="color: #000;">{{ $item->alamat }}</a></p>
+                <p style="margin-top: 30px;"><a href="{{ $item->maps }}" target="_blank" style="color: #000;">{{ $item->alamat }}</a></p>
                 <span><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" style="color: #000;">{{ $item->kontak }}</a></span>
               </div>
             </div>              
