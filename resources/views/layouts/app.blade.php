@@ -79,7 +79,6 @@
             <h4 class="font-weight-bold text-uppercase text-primary">Sosial</h4>
             <div class="social-links mt-3">
               <a href="https://vm.tiktok.com/ZSRopJbpu/" class="tiktok" title="Tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
-              <a href="https://twitter.com/abataprinting_" class="twitter" title="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
               <a href="https://www.facebook.com/Abataprintingpurwokerto" class="facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/abataprinting_/" class="instagram" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
               <a href="https://www.youtube.com/channel/UCQh6JvwZ_nt6fyKhPkOI8FA" class="youtube" title="Youtube" target="_blank"><i class="bi bi-youtube"></i></a>

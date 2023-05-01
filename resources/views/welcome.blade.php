@@ -183,7 +183,7 @@
     </section><!-- End Produk Section -->
 
     <!-- ======= Testimoni Section ======= -->
-    <section id="testimoni" class="testimonials">
+    {{-- <section id="testimoni" class="testimonials">
 
       <div class="container" data-aos="fade-up">
 
@@ -202,17 +202,17 @@
                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                   </div>
                   <p>{{ $item->komentar }}</p>
-                  <div class="profile mt-auto">
+                  <div class="profile mt-auto"> --}}
                     {{-- dev --}}
-                    <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt="">
+                    {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt=""> --}}
                     {{-- prod --}}
                     {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/testimoni/' . $item->foto) }}" class="testimonial-img" alt=""> --}}
-                    <h3>{{ $item->nama }}</h3>
+                    {{-- <h3>{{ $item->nama }}</h3> --}}
                     {{-- <h4>Ceo &amp; Founder</h4> --}}
-                  </div>
+                  {{-- </div>
                 </div>
-              </div><!-- End testimonial item -->                
-            @endforeach
+              </div><!-- End testimonial item -->                 --}}
+            {{-- @endforeach
 
           </div>
           <div class="swiper-pagination"></div>
@@ -220,7 +220,7 @@
 
       </div>
 
-    </section><!-- End Testimoni Section -->
+    </section><!-- End Testimoni Section --> --}}
 
     <!-- ======= Team Section ======= -->
     {{-- <section id="team" class="team">
@@ -260,7 +260,7 @@
     <!-- End Team Section -->
 
     <!-- ======= Pelanggan Section ======= -->
-    <section id="pelanggan" class="clients">
+    {{-- <section id="pelanggan" class="clients">
 
       <div class="container" data-aos="fade-up">
 
@@ -268,13 +268,13 @@
           <p>Pelanggan Kami</p>
         </header>
         <div class="af-client-wrapper">
-          @foreach ($pelanggans as $item)
+          @foreach ($pelanggans as $item) --}}
             {{-- dev --}}
-            <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" alt="pelanggan">
+            {{-- <img src="{{ asset('http://localhost/abata_hrd/public/compro/pelanggan/' . $item->gambar) }}" alt="pelanggan"> --}}
             {{-- prod --}}
             {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/pelanggan/' . $item->gambar) }}" alt="pelanggan"> --}}
-          @endforeach
-        </div>
+          {{-- @endforeach
+        </div> --}}
 
         {{-- <div class="clients-slider swiper"> --}}
           <!-- Swiper -->
@@ -301,10 +301,10 @@
             @endforeach
           </div>
           <div class="swiper-pagination"></div> --}}
-        </div>
+        {{-- </div>
       </div>
 
-    </section><!-- End pelanggan Section -->
+    </section><!-- End pelanggan Section --> --}}
 
     <!-- ======= Partner Section ======= -->
     <section id="partner" class="clients">
