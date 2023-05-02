@@ -81,7 +81,7 @@
                 {{-- prod --}}
                 {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt=""> --}}
                 <h3 class="text-capitalize">{{ $item->nama }}</h3>
-                <p style="text-align: justify;">{{ $item->deskripsi }}</p>
+                <p>{!! $item->deskripsi !!}</p>
               </div>
             </div>              
           @endforeach
@@ -415,7 +415,7 @@
                   <div class="info-box">
                     <i class="{{ $item->icon }}"></i>
                     <h3>{{ $item->title }}</h3>
-                    <p>{{ $item->deskripsi }}</p>
+                    <p>{!! $item->deskripsi !!}</p>
                   </div>
                 </div>                  
               @endforeach
