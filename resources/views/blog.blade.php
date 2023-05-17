@@ -18,10 +18,7 @@
           <div class="af-blog-page-content">
             @foreach ($blogs as $item)
               <div class="af-blog-container">
-                {{-- dev --}}
-                <img src="{{ asset('http://localhost/abata_hrd/public/compro/blog/' . $item->gambar) }}" alt="blog">
-                {{-- prod --}}
-                {{-- <img src="{{ asset('https://hcm.abata-printing.com/public/compro/blog/' . $item->gambar) }}" alt="blog"> --}}
+                <img src="{{ url(env('APP_URL_ADMIN') . '/compro/blog/' . $item->gambar) }}" alt="blog">
                 <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$item->id]) }}">{{ $item->judul }}</a></p>
                 <div class="af-blog-tanggal">
                   <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>

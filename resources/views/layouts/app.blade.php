@@ -53,18 +53,6 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-
-    {{-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Cetak Online Via Whatsapp</h4>
-            <p><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank"><img src="{{ asset('public/assets/img/whatsapp-button.png') }}" alt="tombol-whatsapp" style="max-width: 300px;"></a></p>
-          </div>
-        </div>
-      </div>
-    </div> --}}
-
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
@@ -74,7 +62,6 @@
             </a>
             <p>#SahabatBertumbuh</p>
           </div>
-
           <div class="col-lg-2 col-6 footer-links">
             <h4 class="font-weight-bold text-uppercase text-primary">Sosial</h4>
             <div class="social-links mt-3">
@@ -84,7 +71,6 @@
               <a href="https://www.youtube.com/channel/UCQh6JvwZ_nt6fyKhPkOI8FA" class="youtube" title="Youtube" target="_blank"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
-
           <div class="col-lg-2 col-6 footer-links">
             <h4 class="font-weight-bold text-uppercase text-primary">Legal</h4>
             <ul>
@@ -92,12 +78,10 @@
               <li><a href="{{ route('compro.term') }}" target="_blank" class="text-secondary">Syarat & Ketentuan</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4 class="font-weight-bold text-uppercase text-primary">Kontak</h4>
-            <a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" class="text-secondary">Ajukan Pertanyaan</a>
+            <a href="https://api.whatsapp.com/send/?phone=6285726269500&#038;text=Assalamu%27alaikum+&#038;app_absent=0" target="_blank" class="text-secondary">Ajukan Pertanyaan</a>
           </div>
-
         </div>
       </div>
     </div>
@@ -105,7 +89,6 @@
     <div class="container">
       <div class="copyright">
         <strong><span>&copy;2022 Abata Printing. Hak Cipta Dilindungi.</span></strong>
-        {{-- &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved --}}
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

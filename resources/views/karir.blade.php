@@ -21,7 +21,7 @@
             <div class="af-karir-loker">
               @foreach ($lokers as $item)
                 <div class="af-list">
-                  <img src="{{ asset('https://hcm.abata-printing.com/public/file/loker/' . $item->image) }}" alt="img loker">
+                  <img src="{{ url(env('APP_URL_ADMIN') . '/file/loker/' . $item->image) }}" alt="img loker">
                 </div>
               @endforeach
             </div>
