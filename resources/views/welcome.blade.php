@@ -13,7 +13,7 @@
         <div class="swiper heroSwiper">
           <div class="swiper-wrapper">
             @foreach ($slide as $item)
-              <div class="swiper-slide"><img src="{{ url(env('APP_URL_ADMIN') . '/compro/slide/' . $item->gambar) }}" alt="banner"></div> 
+              <div class="swiper-slide"><img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/slide/' . $item->gambar) }}" alt="banner"></div> 
             @endforeach
           </div>
           <div class="swiper-pagination"></div>
@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ url(env('APP_URL_ADMIN') . '/compro/tentang/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
+            <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/tentang/' . $tentang_gambar->gambar) }}" class="img-fluid" alt="">
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
           @foreach ($gabungs as $item)
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="box">
-                <img src="{{ url(env('APP_URL_ADMIN') . '/compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
+                <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/gabung/' . $item->gambar) }}" class="img-fluid" alt="">
                 <h3 class="text-capitalize">{{ $item->nama }}</h3>
                 <p>{!! $item->deskripsi !!}</p>
               </div>
@@ -79,7 +79,7 @@
           @foreach ($cabangs as $item)
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div class="service-box blue">
-                <img src="{{ url(env('APP_URL_ADMIN') . '/compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;">
+                <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/cabang/' . $item->gambar) }}" alt="" style="max-width: 300px;">
                 <p style="margin-top: 30px;"><a href="{{ $item->maps }}" target="_blank" style="color: #000;">{{ $item->alamat }}</a></p>
                 <span><a href="https://wa.me/62123456789?text=contoh%20isi%20pesan%20dikirim%20via%20whatsapp" target="_blank" style="color: #000;">{{ $item->kontak }}</a></span>
               </div>
@@ -99,8 +99,8 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Semua</li>
-              <li data-filter=".filter-a3">A3</li>
+              <!-- <li data-filter="*" class="filter-active">Semua</li> -->
+              <li data-filter=".filter-a3" class="filter-active">A3</li>
               <li data-filter=".filter-indoor">Indoor</li>
               <li data-filter=".filter-outdoor">Outdoor</li>
               <li data-filter=".filter-merchandise">Merchandise</li>
@@ -114,14 +114,30 @@
           </div>
         </div>
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-          @foreach ($produks as $item)
-            <div class="col-lg-2 col-md-4 portfolio-item filter-{{ $item->kategori }}">
+          @foreach ($produk_a3 as $item)
+            <div class="col-lg-2 col-md-4 portfolio-item">
               <div class="portfolio-wrap">
-                <img src="{{ url(env('APP_URL_ADMIN') . '/compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
+                <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4 class="text-uppercase">{{ $item->nama_produk }}</h4>
                   <div class="portfolio-links">
-                    <a href="{{ url(env('APP_URL_ADMIN') . '/compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                    <a href="{{ url(env('APP_URL_ADMIN') . 'img_compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                  </div>
+                </div>
+                <div class="text-center fw-bold text-uppercase mt-2">{{ $item->nama_produk }}</div>
+                <!-- <div class="text-center">{{ $item->harga }}</div> -->
+              </div>
+            </div>
+          @endforeach
+
+          @foreach ($produks as $item)
+            <div class="col-lg-2 col-md-4 portfolio-item filter-{{ $item->kategori }}" style="display: none;">
+              <div class="portfolio-wrap">
+                <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/produk/' . $item->gambar) }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4 class="text-uppercase">{{ $item->nama_produk }}</h4>
+                  <div class="portfolio-links">
+                    <a href="{{ url(env('APP_URL_ADMIN') . 'img_compro/produk/' . $item->gambar) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
                   </div>
                 </div>
                 <div class="text-center fw-bold text-uppercase mt-2">{{ $item->nama_produk }}</div>
@@ -141,7 +157,7 @@
         </header>
         <div class="af-partner-wrapper">
           @foreach ($partners as $item)
-            <img src="{{ url(env('APP_URL_ADMIN') . '/compro/partner/' . $item->gambar) }}" alt="partner">
+            <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/partner/' . $item->gambar) }}" alt="partner">
           @endforeach
         </div>
       </div>
@@ -154,7 +170,7 @@
         </header>
         <div class="af-blog-wrapper">
           <div class="af-blog-thumbnail">
-            <img src="{{ url(env('APP_URL_ADMIN') . '/compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog">
+            <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/blog/' . $blog_thumbnail->gambar) }}" alt="blog">
             <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$blog_thumbnail->id]) }}">{{ $blog_thumbnail->judul }}</a></p>
             <div class="af-blog-tanggal">
               <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>
@@ -168,7 +184,7 @@
             @foreach ($blog_list as $key => $item)
               @if ($key != 0)
                   <div>
-                    <img src="{{ url(env('APP_URL_ADMIN') . '/compro/blog/' . $item->gambar) }}" alt="blog">
+                    <img src="{{ url(env('APP_URL_ADMIN') . 'img_compro/blog/' . $item->gambar) }}" alt="blog">
                     <p class="af-blog-judul"><a href="{{ route('compro.blog.detail', [$item->id]) }}">{{ $blog_thumbnail->judul }}</a></p>
                     <div class="af-blog-tanggal">
                       <div class="af-blog-tanggal-icon"><i class="ri-calendar-2-line"></i></div>

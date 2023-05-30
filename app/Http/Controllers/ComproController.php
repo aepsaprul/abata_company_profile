@@ -26,6 +26,7 @@ class ComproController extends Controller
     $gabung = ComproGabung::where('grup', 'abata')->get();
     $cabang = ComproCabang::where('grup', 'abata')->get();
     $produk = ComproProduk::where('grup', 'abata')->get();
+    $produk_a3 = ComproProduk::where('grup', 'abata')->where('kategori', 'a3')->get();
     $testimoni = ComproTestimoni::where('grup', 'abata')->get();
     $tim = ComproTim::where('grup', 'abata')->get();
     $partner = ComproPartner::where('grup', 'abata')->get();
@@ -41,6 +42,7 @@ class ComproController extends Controller
       'gabungs' => $gabung,
       'cabangs' => $cabang,
       'produks' => $produk,
+      'produk_a3' => $produk_a3,
       'testimonis' => $testimoni,
       'tims' => $tim,
       'partners' => $partner,
