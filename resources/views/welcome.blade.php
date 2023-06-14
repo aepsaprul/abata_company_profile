@@ -150,7 +150,7 @@
     </section><!-- End Produk Section -->
 
     <!-- ======= Partner Section ======= -->
-    <section id="partner" class="clients">
+    <!-- <section id="partner" class="clients">
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <p>Didukung Oleh:</p>
@@ -161,7 +161,7 @@
           @endforeach
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section>
       <div class="container af-blog" data-aos="fade-left">
