@@ -52,7 +52,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h2>Bergabung Dengan Abata</h2>
-          <p>Dapatkan keuntungan lebih banyak</p>
+          <p class="text-uppercase">Dapatkan keuntungan lebih banyak</p>
         </header>
         <div class="row">
           @foreach ($gabungs as $item)
@@ -73,7 +73,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h2>Cabang</h2>
-          <p>Cetak dimana saja melalui cabang terdekat</p>
+          <p class="text-uppercase">Cetak dimana saja melalui cabang terdekat</p>
         </header>
         <div class="row gy-4">
           @foreach ($cabangs as $item)
@@ -94,22 +94,22 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h2>Produk</h2>
-          <p>Lihat produk terbaru kami</p>
+          <p class="text-uppercase">Lihat produk terbaru kami</p>
         </header>
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <!-- <li data-filter="*" class="filter-active">Semua</li> -->
-              <li data-filter=".filter-a3" class="filter-active">A3</li>
-              <li data-filter=".filter-indoor">Indoor</li>
-              <li data-filter=".filter-outdoor">Outdoor</li>
-              <li data-filter=".filter-merchandise">Merchandise</li>
-              <li data-filter=".filter-advertising">Advertising</li>
-              <li data-filter=".filter-uv">UV</li>
-              <li data-filter=".filter-dtf">DTF</li>
-              <li data-filter=".filter-akrilik">Akrilik</li>
-              <li data-filter=".filter-offset">Offset</li>
-              <li data-filter=".filter-finishing">Finishing</li>
+              <li data-filter=".filter-a3" class="filter-active uppercase" style="font-size: 14px;">A3</li>
+              <li data-filter=".filter-indoor" class="text-uppercase" style="font-size: 14px;">Indoor</li>
+              <li data-filter=".filter-outdoor" class="text-uppercase" style="font-size: 14px;">Outdoor</li>
+              <li data-filter=".filter-merchandise" class="text-uppercase" style="font-size: 14px;">Merchandise</li>
+              <li data-filter=".filter-advertising" class="text-uppercase" style="font-size: 14px;">Advertising</li>
+              <li data-filter=".filter-uv" class="text-uppercase" style="font-size: 14px;">UV</li>
+              <li data-filter=".filter-dtf" class="text-uppercase" style="font-size: 14px;">DTF</li>
+              <li data-filter=".filter-akrilik" class="text-uppercase" style="font-size: 14px;">Akrilik</li>
+              <li data-filter=".filter-offset" class="text-uppercase" style="font-size: 14px;">Offset</li>
+              <li data-filter=".filter-finishing" class="text-uppercase" style="font-size: 14px;">Finishing</li>
             </ul>
           </div>
         </div>
@@ -166,7 +166,7 @@
     <section>
       <div class="container af-blog" data-aos="fade-left">
         <header class="section-header af-header">
-          <p>Blog</p>
+          <p class="text-uppercase">Blog</p>
         </header>
         <div class="af-blog-wrapper">
           <div class="af-blog-thumbnail">
@@ -203,7 +203,7 @@
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h2>Kontak</h2>
-          <p>Kontak Kami</p>
+          <p class="text-uppercase">Kontak Kami</p>
         </header>
         <div class="row gy-4">
           <div class="col-lg-6">
