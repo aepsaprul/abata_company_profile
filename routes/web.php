@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ComproController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Route::post('/kontak/store', [ComproController::class, 'kontakStore'])->name('co
 Route::get('/blog', [ComproController::class, 'blog'])->name('compro.blog');
 Route::get('/blog/{id}/show', [ComproController::class, 'blogDetail'])->name('compro.blog.detail');
 Route::get('/karir', [ComproController::class, 'karir'])->name('compro.karir');
+Route::get('/landing', [LandingController::class, 'index'])->name('landing');

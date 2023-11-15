@@ -4,7 +4,7 @@
 
     <a href="{{ url('/') }}" class="logo d-flex align-items-center">
       <div>
-        <img src="{{ asset('public/assets/img/logo-biru.png') }}" alt="">
+        <img src="{{ asset('assets/img/logo-biru.png') }}" alt="">
       </div>
       <div>
         <h1>Abata Printing</h1>

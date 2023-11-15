@@ -14,26 +14,26 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('public/assets/img/logo-daun.png') }}" rel="icon">
-  <link href="{{ asset('public/assets/img/logo-daun.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('assets/img/logo-daun.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/logo-daun.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{{ asset('public/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('public/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset('public/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('public/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-  {{-- <link href="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  {{-- <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
   <!-- Template Main CSS File -->
-  <link href="{{ asset('public/assets/css/style.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('public/assets/css/aep.css') }}">
+  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('assets/css/aep.css') }}">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.11.0
@@ -58,7 +58,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="{{ asset('public/assets/img/logo-biru-2.png') }}" alt="">
+              <img src="{{ asset('assets/img/logo-biru-2.png') }}" alt="">
             </a>
             <p>#SahabatBertumbuh</p>
           </div>
@@ -106,17 +106,17 @@
   </a>
 
   <!-- Vendor JS Files -->
-  <script src="{{ asset('public/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-  <script src="{{ asset('public/assets/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('public/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('public/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  {{-- <script src="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.js') }}"></script> --}}
-  <script src="{{ asset('public/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  {{-- <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script> --}}
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('public/assets/js/main.js') }}"></script>
-  <script src="{{ asset('public/assets/js/aep.js') }}"></script>
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+  <script src="{{ asset('assets/js/aep.js') }}"></script>
 
   @yield('script')
 
