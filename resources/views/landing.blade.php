@@ -14,36 +14,36 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('assets/img/logo-daun.png') }}" rel="icon">
-  <link href="{{ asset('assets/img/logo-daun.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('public/assets/img/logo-daun.png') }}" rel="icon">
+  <link href="{{ asset('public/assets/img/logo-daun.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-  {{-- <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
+  <link href="{{ asset('public/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('public/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  {{-- <link href="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet"> --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
   <!-- Template Main CSS File -->
-  <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('assets/css/aep.css') }}">
+  <link href="{{ asset('public/assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('public/assets/css/aep.css') }}">
 
 </head>
 
 <body>
   <div class="row d-flex justify-content-center">
-    <div class="col-6">
+    <div class="col-lg-6 col-12">
       <div class="text-primary h1 text-uppercase text-center">visi</div>
-      <div>
+      <p class="p-3 text-justify">
         Menjadi Perusahaan Berskala Nasional yang Expert dalam Peningkatan Traffic dan Membangun Brand Awareness bagi Pertumbuhan UMKM di Indonesia
-      </div>
+      </p>
       <div class="text-primary h1 text-uppercase text-center">misi</div>
       <div>
         <ol>
@@ -53,7 +53,7 @@
           <li>Memiliki sarana dan prasarana sesuai dengan perkembangan teknologi</li>
         </ul>
       </div>
-      <div><span style="font-weight: bold;">NILAI PERUSAHAAN - “ SPEAK ”</span></div>
+      <div class="p-3"><span style="font-weight: bold;">NILAI PERUSAHAAN - “ SPEAK ”</span></div>
       <div>
         <ol>
           <li>Spiritual</li>
@@ -68,7 +68,7 @@
           Terus menciptakan dan mengembangkan ide-ide baru serta melakukan pembaharuan (kreasi baru) untuk mendukung pertumbuhan perusahaan
         </ol>
       </div>
-      <div class="mb-3"><span style="font-weight: bold;">BUDAYA KERJA - “ 5K ”</span></div>
+      <div class="mb-3 p-3"><span style="font-weight: bold;">BUDAYA KERJA - “ 5K ”</span></div>
       <div>
         <ol>
           <li>Kejujuran</li>
@@ -83,8 +83,8 @@
           Kemampuan tim untuk menyelesaikan pekerjaan secara tuntas sesuai waktu yang telah ditentukan
         </ol>
       </div>
-      <div class="mb-3"><span style="font-weight: bold;">Tema Kerja Tahunan</span></div>
-      <div class="mb-3">
+      <div class="mb-3 p-3"><span style="font-weight: bold;">Tema Kerja Tahunan</span></div>
+      <div class="mb-3 p-3">
         <table>
           <tr>
             <td>Tahun 2021</td>
@@ -104,12 +104,12 @@
           </tr>
         </table>
       </div>
-      <div><span style="font-weight: bold;">Unit bisnis Abata Group</span></div>
-      <div class="mb-3">
-        <img src="{{ asset('assets/img/unit-bisnis.png') }}" alt="img" style="width: 100%;">
+      <div class="p-3"><span style="font-weight: bold;">Unit bisnis Abata Group</span></div>
+      <div class="mb-3 p-3">
+        <img src="{{ asset('public/assets/img/unit-bisnis.png') }}" alt="img" style="width: 100%;">
       </div>
       <div>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="font-size: 10px;">
           <thead>
             <tr>
               <th class="text-center p-2">No</th>
@@ -168,17 +168,17 @@
   </div>
   
   <!-- Vendor JS Files -->
-  <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  {{-- <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script> --}}
-  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  {{-- <script src="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.js') }}"></script> --}}
+  <script src="{{ asset('public/assets/vendor/php-email-form/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{ asset('assets/js/main.js') }}"></script>
-  <script src="{{ asset('assets/js/aep.js') }}"></script>
+  <script src="{{ asset('public/assets/js/main.js') }}"></script>
+  <script src="{{ asset('public/assets/js/aep.js') }}"></script>
 
 </body>
 
